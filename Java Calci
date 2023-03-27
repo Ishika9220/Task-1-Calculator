@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class calculator {
+    public static void main (String[] args)
+    {
+        int num1,num2,choice,ans;
+        char res='y';
+        Scanner sc= new Scanner(System.in);
+        System.out.println("*******CALCULATOR******");
+        System.out.println("Enter first number : ");
+        num1= sc.nextInt();
+        System.out.println("Enter second number : ");
+        num2= sc.nextInt();
+
+
+        do
+        {
+            System.out.println("1.Addition\n2.Substrection\n3.Multiplication \n4.Division\n");
+            System.out.println("Enter your choice :");
+            choice =sc.nextInt();
+
+            switch(choice)
+            {
+                case 1 : ans=num1+num2;
+                         System.out.println("Addition of " +num1+ " and " +num2+ " = "+ ans);
+                         break;
+
+                case 2 : ans=num1-num2;
+                         System.out.println("Substraction of " +num1+ " and " +num2+ " = "+ ans);
+                         break;
+
+                case 3 : ans=num1*num2;
+                         System.out.println("Multiplication of " +num1+ " and " +num2+ " = "+ ans);
+                         break;
+
+                case 4 : ans=num1/num2;
+                         System.out.println("Division of " +num1+ " and " +num2+ " = "+ ans);
+                         break;
+
+                default : System.out.println("Invalid choice ");
+
+
+            }
+            System.out.println("Do you want to continue :");
+            res = sc.next().charAt(0);
+        }while(res =='y');
+    }
+}
